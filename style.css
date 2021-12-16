@@ -36,9 +36,11 @@
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 4s;
 }
 .ex-10-icon {
     font-size: 60px;
+    animation: ruota 3s linear infinite reverse;
 }
 .ex-11-icon {
     font-size: 60px;
@@ -109,4 +111,54 @@
 .ex-8-img:hover{
     filter: saturate(500%) invert(100%);
     border-radius: 10%;
+}
+.ex-9-img:hover{
+    transform: scale(1.5);
+    filter: grayscale(80%) contrast(50%);
+    border-radius: 10%;
+}
+@keyframes ruota {
+    25% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}
+.ex-11-icon:hover{
+    animation: ruota2 3s linear infinite;
+}
+@keyframes ruota2 {
+    33% {transform: rotate(90deg);}
+    66% {transform: rotate(180deg);}
+    100% {transform: rotate(270deg);}
+}
+.ex-12-top-white{
+    animation: muoviti 1s linear infinite;
+}
+.ex-12-bottom-white{
+    animation: muoviti2 1s linear infinite;
+}
+@keyframes muoviti {
+    50% {top: -10%;
+        left: 60%
+    }
+    100% {top: -10%;
+        left: 10%;
+    }
+}
+@keyframes muoviti2 {
+    50% {
+        bottom: -10%;
+        right: 60%;
+    }
+    100% {
+        bottom: -10%;
+        right: 20%;
+    }
+}
+
+.ex-13-top-white{
+    animation: gira 5s linear infinite;
+}
+@keyframes gira {
+    
 }
